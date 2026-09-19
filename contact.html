@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — Virexo Innovations</title>
+<meta name="description" content="Get in touch with Virexo Innovations by email, phone, or the contact form." />
+<link rel="icon" href="assets/logo/virexo-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/animations.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+<div id="site-navbar"></div>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container">
+      <span class="page-hero-eyebrow">Contact</span>
+      <h1>Let's talk</h1>
+      <p>Reach out by email or phone, or send a message using the form below.</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container two-col">
+
+      <div class="reveal">
+        <h2 style="margin-bottom:24px;">Get in touch</h2>
+        <ul class="icon-list">
+          <li>
+            <span class="bullet-icon">✉️</span>
+            <div><strong>Email</strong><span class="desc"><a href="mailto:virexo.official.tech@gmail.com" style="color:var(--purple-bright);">virexo.official.tech@gmail.com</a></span></div>
+          </li>
+          <li>
+            <span class="bullet-icon">📞</span>
+            <div><strong>Phone</strong><span class="desc"><a href="tel:+92302719916" style="color:var(--purple-bright);">+92 302 719916</a></span></div>
+          </li>
+          <li>
+            <span class="bullet-icon">🌍</span>
+            <div><strong>Work Model</strong><span class="desc">Remote Work — available to clients worldwide</span></div>
+          </li>
+        </ul>
+
+        <h3 style="margin:36px 0 16px; font-size:1.05rem; color:#fff;">Follow us</h3>
+        <div class="footer-social" style="margin-top:0;">
+          <a href="https://www.instagram.com/virexoinnovations?stkn=MTFkZWsyc3ZscTJyMQ==" target="_blank" rel="noopener noreferrer" aria-label="Virexo Innovations on Instagram">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/virexoinnovations/" target="_blank" rel="noopener noreferrer" aria-label="Virexo Innovations on LinkedIn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.83v1.98h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.14V23h-4v-6.6c0-1.57-.03-3.6-2.2-3.6-2.2 0-2.54 1.72-2.54 3.49V23h-4V8.5z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="form-shell reveal" style="margin:0;">
+        <div class="form-status" id="contactFormStatus"></div>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="cName">Full Name <span class="req">*</span></label>
+              <input type="text" id="cName" name="name" required />
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="cEmail">Email <span class="req">*</span></label>
+              <input type="email" id="cEmail" name="email" required />
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="cSubject">Subject</label>
+              <input type="text" id="cSubject" name="subject" />
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="cMessage">Message <span class="req">*</span></label>
+              <textarea id="cMessage" name="message" required></textarea>
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+        </form>
+        <div class="success-panel" id="contactFormSuccess" style="display:none;">
+          <div class="icon-circle">✓</div>
+          <h3>Message sent</h3>
+          <p>Thanks for reaching out — your message has been sent to Virexo Innovations. We'll reply as soon as we can.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/components.js"></script>
+<script>
+  Virexo.renderNavbar("contact");
+  Virexo.renderFooter();
+</script>
+<script src="js/main.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>

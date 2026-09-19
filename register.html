@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Join Now — Virexo Innovations</title>
+<meta name="description" content="Create an account with Virexo Innovations." />
+<link rel="icon" href="assets/logo/virexo-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/animations.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+<div id="site-navbar"></div>
+
+<main id="main">
+  <section class="section-tight" style="padding-top:calc(var(--nav-height) + 60px);">
+    <div class="container">
+      <div class="form-shell reveal">
+        <div style="text-align:center; margin-bottom:26px;">
+          <h1 style="font-size:1.6rem;">Create your account</h1>
+          <p style="color:var(--text-secondary); font-size:0.92rem; margin-top:8px;">Join Virexo to access courses and your dashboard.</p>
+        </div>
+
+        <div class="form-status" id="registerFormStatus"></div>
+
+        <form id="registerForm" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="rName">Full Name <span class="req">*</span></label>
+              <input type="text" id="rName" name="fullName" required />
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="rEmail">Email ID <span class="req">*</span></label>
+              <input type="email" id="rEmail" name="email" required />
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="rPassword">Password <span class="req">*</span></label>
+              <div class="password-wrap">
+                <input type="password" id="rPassword" name="password" required minlength="8" />
+                <button type="button" class="password-toggle">Show</button>
+              </div>
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="rConfirm">Confirm Password <span class="req">*</span></label>
+              <div class="password-wrap">
+                <input type="password" id="rConfirm" name="confirmPassword" data-match="password" required minlength="8" />
+                <button type="button" class="password-toggle">Show</button>
+              </div>
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <p class="form-note">Password must be at least 8 characters.</p>
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top:10px;">Create Account</button>
+        </form>
+
+        <div class="success-panel" id="registerFormSuccess" style="display:none;">
+          <div class="icon-circle">✓</div>
+          <h3>Account created</h3>
+          <p>Your account has been created successfully. You can now log in.</p>
+          <a href="login.html" class="btn btn-primary" style="margin-top:20px;">Go to Login</a>
+        </div>
+
+        <p class="form-footer-link">Already have an account? <a href="login.html">Log In</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/components.js"></script>
+<script>
+  Virexo.renderNavbar("courses");
+  Virexo.renderFooter();
+</script>
+<script src="js/main.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>

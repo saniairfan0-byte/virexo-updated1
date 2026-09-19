@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Services — Virexo Innovations</title>
+<meta name="description" content="Explore Virexo Innovations' services: custom software, web & mobile apps, UI/UX design, cloud solutions, and ongoing support." />
+<link rel="icon" href="assets/logo/virexo-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/animations.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+<div id="site-navbar"></div>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container">
+      <span class="page-hero-eyebrow">Services</span>
+      <h1>What we build for you</h1>
+      <p>Six core services covering everything from custom software to ongoing support — each solving a specific problem for growing businesses.</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+
+      <div class="service-tabs" data-tab-group="services">
+        <button class="service-tab active" data-tab-target="all">All Services</button>
+        <button class="service-tab" data-tab-target="development">Development</button>
+        <button class="service-tab" data-tab-target="design">Design</button>
+        <button class="service-tab" data-tab-target="infra">Cloud &amp; Support</button>
+      </div>
+
+      <div class="grid grid-3" data-tab-panel="services" data-tab-id="all">
+        <article class="card" id="custom-software" data-filter-cat="development">
+          <div class="card-icon">💻</div>
+          <h3>Custom Software Development</h3>
+          <p>Scalable, secure, high-performance software built around your business.</p>
+          <button class="card-link" data-modal-open="svc-1">Learn More →</button>
+        </article>
+        <article class="card" id="web-mobile" data-filter-cat="development">
+          <div class="card-icon">📱</div>
+          <h3>Web &amp; Mobile Applications</h3>
+          <p>Modern, responsive, user-friendly apps for web and mobile platforms.</p>
+          <button class="card-link" data-modal-open="svc-2">Learn More →</button>
+        </article>
+        <article class="card" data-filter-cat="infra">
+          <div class="card-icon">☁️</div>
+          <h3>Cloud Solutions</h3>
+          <p>Future-proof infrastructure with modern cloud hosting and deployments.</p>
+          <button class="card-link" data-modal-open="svc-3">Learn More →</button>
+        </article>
+        <article class="card" id="ui-ux" data-filter-cat="design">
+          <div class="card-icon">🎨</div>
+          <h3>UI/UX Design</h3>
+          <p>Beautiful, intuitive, user-centred designs that drive engagement.</p>
+          <button class="card-link" data-modal-open="svc-4">Learn More →</button>
+        </article>
+        <article class="card" data-filter-cat="development">
+          <div class="card-icon">🧩</div>
+          <h3>Web &amp; Mobile App Development</h3>
+          <p>Turning ideas into fully working, production-ready web and mobile products.</p>
+          <button class="card-link" data-modal-open="svc-5">Learn More →</button>
+        </article>
+        <article class="card" data-filter-cat="infra">
+          <div class="card-icon">🛡️</div>
+          <h3>Maintenance &amp; Support</h3>
+          <p>Keep your systems running smoothly with ongoing updates and support.</p>
+          <button class="card-link" data-modal-open="svc-6">Learn More →</button>
+        </article>
+      </div>
+
+      <!-- Filtered views reuse the same cards by category via JS toggle -->
+      <div class="grid grid-3" data-tab-panel="services" data-tab-id="development" style="display:none;">
+        <article class="card"><div class="card-icon">💻</div><h3>Custom Software Development</h3><p>Scalable, secure, high-performance software built around your business.</p><button class="card-link" data-modal-open="svc-1">Learn More →</button></article>
+        <article class="card"><div class="card-icon">📱</div><h3>Web &amp; Mobile Applications</h3><p>Modern, responsive, user-friendly apps for web and mobile platforms.</p><button class="card-link" data-modal-open="svc-2">Learn More →</button></article>
+        <article class="card"><div class="card-icon">🧩</div><h3>Web &amp; Mobile App Development</h3><p>Turning ideas into fully working, production-ready web and mobile products.</p><button class="card-link" data-modal-open="svc-5">Learn More →</button></article>
+      </div>
+      <div class="grid grid-3" data-tab-panel="services" data-tab-id="design" style="display:none;">
+        <article class="card"><div class="card-icon">🎨</div><h3>UI/UX Design</h3><p>Beautiful, intuitive, user-centred designs that drive engagement.</p><button class="card-link" data-modal-open="svc-4">Learn More →</button></article>
+      </div>
+      <div class="grid grid-3" data-tab-panel="services" data-tab-id="infra" style="display:none;">
+        <article class="card"><div class="card-icon">☁️</div><h3>Cloud Solutions</h3><p>Future-proof infrastructure with modern cloud hosting and deployments.</p><button class="card-link" data-modal-open="svc-3">Learn More →</button></article>
+        <article class="card"><div class="card-icon">🛡️</div><h3>Maintenance &amp; Support</h3><p>Keep your systems running smoothly with ongoing updates and support.</p><button class="card-link" data-modal-open="svc-6">Learn More →</button></article>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section-tight" style="background:var(--bg-elevated); border-top:1px solid var(--border-soft);">
+    <div class="container">
+      <div class="section-head center reveal">
+        <h2>Common questions</h2>
+        <p>A few things clients often ask before starting a project.</p>
+      </div>
+      <div style="max-width:760px; margin:0 auto;">
+        <div class="accordion-item">
+          <button class="accordion-trigger">How long does a typical project take? <span class="plus">+</span></button>
+          <div class="accordion-panel"><div class="accordion-panel-inner">It depends on scope — a marketing website may take a few weeks, while a full platform can take a few months. We give you a realistic timeline after the discovery call.</div></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">Do you work with early-stage startups? <span class="plus">+</span></button>
+          <div class="accordion-panel"><div class="accordion-panel-inner">Yes — we work with startups, small businesses, and established companies alike, and can help scope an MVP if you're early.</div></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">What happens after launch? <span class="plus">+</span></button>
+          <div class="accordion-panel"><div class="accordion-panel-inner">We offer ongoing maintenance and support so your product keeps running smoothly as you grow.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="cta-band reveal">
+      <h2>Not sure which service fits?</h2>
+      <p>Tell us about your project and we'll recommend the right approach.</p>
+      <a href="start-a-project.html" class="btn btn-primary">Start a Project</a>
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer"></div>
+
+<!-- SERVICE DETAIL MODALS -->
+<div class="modal-overlay" id="svc-1" data-modal><div class="modal-box"><button class="modal-close" data-modal-close aria-label="Close">✕</button>
+  <span class="modal-eyebrow">Development</span><h3>Custom Software Development</h3>
+  <p><strong>Problem:</strong> Generic tools don't match how your team actually operates, creating manual workarounds and wasted time.</p>
+  <p><strong>Solution:</strong> We design and build software tailored to your exact processes — internal tools, dashboards, or full platforms.</p>
+  <p><strong>Benefits:</strong></p>
+  <ul><li>Software that fits your workflow, not the other way around</li><li>Scalable architecture as your business grows</li><li>Full ownership of your codebase</li></ul>
+  <a href="start-a-project.html" class="btn btn-primary">Start a Project</a>
+</div></div>
+
+<div class="modal-overlay" id="svc-2" data-modal><div class="modal-box"><button class="modal-close" data-modal-close aria-label="Close">✕</button>
+  <span class="modal-eyebrow">Development</span><h3>Web &amp; Mobile Applications</h3>
+  <p><strong>Problem:</strong> Slow or clunky apps lose users before they experience any value.</p>
+  <p><strong>Solution:</strong> We build fast, responsive applications with clean interfaces across web and mobile.</p>
+  <p><strong>Benefits:</strong></p>
+  <ul><li>Consistent experience across devices</li><li>Faster load times and smoother interactions</li><li>Built to scale with your user base</li></ul>
+  <a href="start-a-project.html" class="btn btn-primary">Start a Project</a>
+</div></div>
+
+<div class="modal-overlay" id="svc-3" data-modal><div class="modal-box"><button class="modal-close" data-modal-close aria-label="Close">✕</button>
+  <span class="modal-eyebrow">Cloud &amp; Support</span><h3>Cloud Solutions</h3>
+  <p><strong>Problem:</strong> Outdated or fragile infrastructure leads to downtime and slow scaling.</p>
+  <p><strong>Solution:</strong> We architect and deploy modern cloud infrastructure suited to your traffic and budget.</p>
+  <p><strong>Benefits:</strong></p>
+  <ul><li>Reliable uptime and performance</li><li>Infrastructure that scales with demand</li><li>Cost-efficient hosting setup</li></ul>
+  <a href="start-a-project.html" class="btn btn-primary">Start a Project</a>
+</div></div>
+
+<div class="modal-overlay" id="svc-4" data-modal><div class="modal-box"><button class="modal-close" data-modal-close aria-label="Close">✕</button>
+  <span class="modal-eyebrow">Design</span><h3>UI/UX Design</h3>
+  <p><strong>Problem:</strong> Confusing interfaces frustrate users and quietly hurt conversion rates.</p>
+  <p><strong>Solution:</strong> We design intuitive, research-informed interfaces with a consistent design system.</p>
+  <p><strong>Benefits:</strong></p>
+  <ul><li>Interfaces that feel effortless to use</li><li>Consistent branding across every screen</li><li>Higher engagement and conversion</li></ul>
+  <a href="start-a-project.html" class="btn btn-primary">Start a Project</a>
+</div></div>
+
+<div class="modal-overlay" id="svc-5" data-modal><div class="modal-box"><button class="modal-close" data-modal-close aria-label="Close">✕</button>
+  <span class="modal-eyebrow">Development</span><h3>Web &amp; Mobile App Development</h3>
+  <p><strong>Problem:</strong> Ideas often stall between concept and a real, working product.</p>
+  <p><strong>Solution:</strong> We take your idea from wireframe to a fully functioning, production-ready product.</p>
+  <p><strong>Benefits:</strong></p>
+  <ul><li>End-to-end delivery under one roof</li><li>Production-ready code from day one</li><li>Clear milestones throughout the build</li></ul>
+  <a href="start-a-project.html" class="btn btn-primary">Start a Project</a>
+</div></div>
+
+<div class="modal-overlay" id="svc-6" data-modal><div class="modal-box"><button class="modal-close" data-modal-close aria-label="Close">✕</button>
+  <span class="modal-eyebrow">Cloud &amp; Support</span><h3>Maintenance &amp; Support</h3>
+  <p><strong>Problem:</strong> Products left unmaintained accumulate bugs, security risks, and outdated dependencies.</p>
+  <p><strong>Solution:</strong> We provide ongoing monitoring, updates, and support after launch.</p>
+  <p><strong>Benefits:</strong></p>
+  <ul><li>Peace of mind after launch</li><li>Faster fixes when issues come up</li><li>A product that stays current over time</li></ul>
+  <a href="start-a-project.html" class="btn btn-primary">Start a Project</a>
+</div></div>
+
+<script src="js/components.js"></script>
+<script>
+  Virexo.renderNavbar("services");
+  Virexo.renderFooter();
+</script>
+<script src="js/main.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>

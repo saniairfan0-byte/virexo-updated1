@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Start a Project — Virexo Innovations</title>
+<meta name="description" content="Tell Virexo Innovations about your project and we'll get back to you with next steps." />
+<link rel="icon" href="assets/logo/virexo-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/animations.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+<div id="site-navbar"></div>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container">
+      <span class="page-hero-eyebrow">Start a Project</span>
+      <h1>Tell us what you're building</h1>
+      <p>Fill out the form below and our team will follow up with next steps, usually within 1–2 business days.</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <div class="form-shell wide reveal">
+
+        <div class="form-status" id="projectFormStatus"></div>
+
+        <form id="projectForm" novalidate>
+          <div class="form-row two">
+            <div class="field">
+              <label for="pFullName">Full Name <span class="req">*</span></label>
+              <input type="text" id="pFullName" name="fullName" required />
+              <span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="pEmail">Email <span class="req">*</span></label>
+              <input type="email" id="pEmail" name="email" required />
+              <span class="field-error"></span>
+            </div>
+          </div>
+
+          <div class="form-row two">
+            <div class="field">
+              <label for="pPhone">Phone / Contact</label>
+              <input type="tel" id="pPhone" name="phone" placeholder="+1 555 000 0000" />
+              <span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="pCompany">Company / Business</label>
+              <input type="text" id="pCompany" name="company" />
+              <span class="field-error"></span>
+            </div>
+          </div>
+
+          <div class="form-row two">
+            <div class="field">
+              <label for="pService">Service Needed <span class="req">*</span></label>
+              <select id="pService" name="service" required>
+                <option value="">Select a service</option>
+                <option>Custom Software Development</option>
+                <option>Web &amp; Mobile Applications</option>
+                <option>UI/UX Design</option>
+                <option>Cloud Solutions</option>
+                <option>Maintenance &amp; Support</option>
+                <option>Other</option>
+              </select>
+              <span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="pType">Project Type</label>
+              <select id="pType" name="projectType">
+                <option value="">Select a type</option>
+                <option>New Website</option>
+                <option>Web Application</option>
+                <option>Mobile App</option>
+                <option>E-Commerce Store</option>
+                <option>Redesign / Rebuild</option>
+                <option>Other</option>
+              </select>
+              <span class="field-error"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="pDescription">Project Description <span class="req">*</span></label>
+              <textarea id="pDescription" name="description" required placeholder="What are you trying to build? What problem should it solve?"></textarea>
+              <span class="field-error"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="pRequirements">Other Requirements</label>
+              <textarea id="pRequirements" name="requirements" placeholder="Timeline, budget range, integrations, or anything else we should know."></textarea>
+              <span class="field-error"></span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Send Project Details</button>
+          <p class="form-note">By submitting, you agree to be contacted by Virexo Innovations regarding your project.</p>
+        </form>
+
+        <div class="success-panel" id="projectFormSuccess" style="display:none;">
+          <div class="icon-circle">✓</div>
+          <h3>Your project details have been sent</h3>
+          <p>Thanks for reaching out — your information has been sent to Virexo Innovations. Our team will review it and get back to you soon.</p>
+          <a href="index.html" class="btn btn-ghost" style="margin-top:20px;">Back to Home</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/components.js"></script>
+<script>
+  Virexo.renderNavbar("home");
+  Virexo.renderFooter();
+</script>
+<script src="js/main.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>

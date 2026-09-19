@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard — Virexo Innovations</title>
+<meta name="description" content="Your Virexo Innovations course dashboard." />
+<link rel="icon" href="assets/logo/virexo-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/animations.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+<div id="site-navbar"></div>
+
+<main id="main" style="padding-top:var(--nav-height);">
+  <div class="dash-shell">
+    <aside class="dash-sidebar">
+      <div class="user-chip">
+        <div class="avatar">V</div>
+        <div>
+          <div style="color:#fff; font-weight:600; font-size:0.92rem;">Your Account</div>
+          <div style="color:var(--text-muted); font-size:0.78rem;">Student</div>
+        </div>
+      </div>
+      <nav class="dash-nav">
+        <a href="#" class="active">Overview</a>
+        <a href="courses.html">Browse Courses</a>
+        <a href="#" id="logoutBtn">Log Out</a>
+      </nav>
+    </aside>
+    <section class="dash-main">
+      <h1 style="font-size:1.6rem; margin-bottom:8px;">Welcome back</h1>
+      <p style="color:var(--text-secondary); margin-bottom:32px;">Here's an overview of your learning so far.</p>
+
+      <div class="grid grid-3" style="margin-bottom:40px;">
+        <div class="card"><h3 style="font-size:1rem;">Enrolled Courses</h3><p style="font-size:2rem; color:#fff; font-family:var(--font-display); font-weight:700; margin-top:8px;">0</p></div>
+        <div class="card"><h3 style="font-size:1rem;">Completed</h3><p style="font-size:2rem; color:#fff; font-family:var(--font-display); font-weight:700; margin-top:8px;">0</p></div>
+        <div class="card"><h3 style="font-size:1rem;">In Progress</h3><p style="font-size:2rem; color:#fff; font-family:var(--font-display); font-weight:700; margin-top:8px;">0</p></div>
+      </div>
+
+      <div class="card dash-empty">
+        <h3 style="color:#fff; margin-bottom:10px;">No courses enrolled yet</h3>
+        <p style="margin-bottom:20px;">Browse the course catalog and enroll to see your progress here.</p>
+        <a href="courses.html" class="btn btn-primary">Browse Courses</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/components.js"></script>
+<script>
+  Virexo.renderNavbar("courses");
+  Virexo.renderFooter();
+
+  // Gate this page behind the demo login flag.
+  if (sessionStorage.getItem("virexoLoggedIn") !== "true") {
+    window.location.href = "login.html?redirect=dashboard.html&purpose=dashboard";
+  }
+
+  document.getElementById("logoutBtn").addEventListener("click", (e) => {
+    e.preventDefault();
+    sessionStorage.removeItem("virexoLoggedIn");
+    window.location.href = "login.html";
+  });
+</script>
+<script src="js/main.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>

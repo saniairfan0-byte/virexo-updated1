@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Login — Virexo Innovations</title>
+<meta name="description" content="Log in to your Virexo Innovations account." />
+<link rel="icon" href="assets/logo/virexo-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/animations.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+<div id="site-navbar"></div>
+
+<main id="main">
+  <section class="section-tight" style="padding-top:calc(var(--nav-height) + 60px);">
+    <div class="container">
+      <div class="form-shell reveal">
+        <div style="text-align:center; margin-bottom:26px;">
+          <h1 style="font-size:1.6rem;">Welcome back</h1>
+          <p id="loginContext" style="color:var(--text-secondary); font-size:0.92rem; margin-top:8px;">Log in to continue.</p>
+        </div>
+
+        <div class="form-status" id="loginFormStatus"></div>
+
+        <form id="loginForm" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="lEmail">Email <span class="req">*</span></label>
+              <input type="email" id="lEmail" name="email" required />
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="lPassword">Password <span class="req">*</span></label>
+              <div class="password-wrap">
+                <input type="password" id="lPassword" name="password" required minlength="8" />
+                <button type="button" class="password-toggle">Show</button>
+              </div>
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Log In</button>
+        </form>
+
+        <div class="success-panel" id="loginFormSuccess" style="display:none;">
+          <div class="icon-circle">✓</div>
+          <h3>Signed in</h3>
+          <p>Redirecting you now…</p>
+        </div>
+
+        <p class="form-footer-link">Don't have an account? <a href="register.html">Join Now</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/components.js"></script>
+<script>
+  Virexo.renderNavbar("courses");
+  Virexo.renderFooter();
+
+  // Determine where to send the user after login, and what to say
+  const params = new URLSearchParams(window.location.search);
+  const redirect = params.get("redirect") || "dashboard.html";
+  const purpose = params.get("purpose");
+  const form = document.getElementById("loginForm");
+  form.dataset.redirect = redirect;
+
+  const contextEl = document.getElementById("loginContext");
+  if (purpose === "offer-letter") {
+    contextEl.textContent = "Log in to download your offer letter.";
+  } else if (purpose === "dashboard") {
+    contextEl.textContent = "Log in to access your course dashboard.";
+  } else {
+    contextEl.textContent = "Log in to continue.";
+  }
+</script>
+<script src="js/main.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>

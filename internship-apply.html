@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Apply for Internship — Virexo Innovations</title>
+<meta name="description" content="Apply for the Virexo Innovations internship program." />
+<link rel="icon" href="assets/logo/virexo-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/animations.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+<div id="site-navbar"></div>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container">
+      <span class="page-hero-eyebrow">Internship</span>
+      <h1>Apply for an internship</h1>
+      <p>Tell us about yourself and the role you're interested in.</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <div class="form-shell wide reveal">
+        <div class="form-status" id="internshipFormStatus"></div>
+
+        <form id="internshipForm" novalidate>
+          <div class="form-row two">
+            <div class="field">
+              <label for="iName">Full Name <span class="req">*</span></label>
+              <input type="text" id="iName" name="fullName" required />
+              <span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="iEmail">Email <span class="req">*</span></label>
+              <input type="email" id="iEmail" name="email" required />
+              <span class="field-error"></span>
+            </div>
+          </div>
+
+          <div class="form-row two">
+            <div class="field">
+              <label for="iPhone">Phone <span class="req">*</span></label>
+              <input type="tel" id="iPhone" name="phone" required />
+              <span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="iEducation">Education</label>
+              <input type="text" id="iEducation" name="education" placeholder="Degree, institution, year" />
+              <span class="field-error"></span>
+            </div>
+          </div>
+
+          <div class="form-row two">
+            <div class="field">
+              <label for="iRole">Preferred Role <span class="req">*</span></label>
+              <select id="iRole" name="role" required>
+                <option value="">Select a role</option>
+                <option>Frontend Development</option>
+                <option>Backend Development</option>
+                <option>Full Stack Development</option>
+                <option>UI/UX Design</option>
+                <option>AI / Machine Learning</option>
+              </select>
+              <span class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="iPortfolio">Portfolio / LinkedIn</label>
+              <input type="url" id="iPortfolio" name="portfolio" placeholder="https://" />
+              <span class="field-error"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="iSkills">Skills</label>
+              <textarea id="iSkills" name="skills" placeholder="e.g. JavaScript, React, Figma, Python…"></textarea>
+              <span class="field-error"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="iExperience">Experience</label>
+              <textarea id="iExperience" name="experience" placeholder="Any relevant experience, projects, or coursework."></textarea>
+              <span class="field-error"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="iWhy">Why do you want to join Virexo? <span class="req">*</span></label>
+              <textarea id="iWhy" name="motivation" required></textarea>
+              <span class="field-error"></span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Submit Application</button>
+        </form>
+
+        <div class="success-panel" id="internshipFormSuccess" style="display:none;">
+          <div class="icon-circle">✓</div>
+          <h3>Application received</h3>
+          <p>Thanks for applying — your internship application has been received. We'll be in touch if you're shortlisted.</p>
+          <a href="internship.html" class="btn btn-ghost" style="margin-top:20px;">Back to Internship Page</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/components.js"></script>
+<script>
+  Virexo.renderNavbar("internship");
+  Virexo.renderFooter();
+</script>
+<script src="js/main.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>

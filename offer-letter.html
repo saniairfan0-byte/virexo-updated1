@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Download Offer Letter — Virexo Innovations</title>
+<meta name="description" content="Download your Virexo Innovations internship offer letter." />
+<link rel="icon" href="assets/logo/virexo-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/animations.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+<div id="site-navbar"></div>
+
+<main id="main">
+  <section class="section-tight" style="padding-top:calc(var(--nav-height) + 60px); min-height:60vh; display:flex; align-items:center;">
+    <div class="container">
+      <div class="form-shell reveal" style="text-align:center;">
+        <div class="icon-circle" style="margin:0 auto 20px;">📄</div>
+        <h1 style="font-size:1.5rem; margin-bottom:12px;">Download Offer Letter</h1>
+        <p style="color:var(--text-secondary);">You're logged in. Click below to download your offer letter document.</p>
+        <button class="btn btn-primary" id="downloadOfferBtn" style="margin-top:24px;">Download Offer Letter</button>
+        <p class="form-note" id="offerNote" style="margin-top:16px;"></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/components.js"></script>
+<script>
+  Virexo.renderNavbar("internship");
+  Virexo.renderFooter();
+
+  // Gate this page behind the demo login flag.
+  if (sessionStorage.getItem("virexoLoggedIn") !== "true") {
+    window.location.href = "login.html?redirect=offer-letter.html&purpose=offer-letter";
+  }
+
+  document.getElementById("downloadOfferBtn").addEventListener("click", () => {
+    const content =
+      "VIREXO INNOVATIONS\n" +
+      "Where Innovation Meets Excellence\n\n" +
+      "INTERNSHIP OFFER LETTER (TEMPLATE)\n\n" +
+      "This is a placeholder offer letter template generated for demonstration purposes.\n" +
+      "Replace this content with the finalized offer letter text once the internship\n" +
+      "team confirms candidate details, role, start date, and terms.\n\n" +
+      "Contact: virexo.official.tech@gmail.com | +92 302 719916\n";
+    const blob = new Blob([content], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "Virexo-Offer-Letter-Template.txt";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+    document.getElementById("offerNote").textContent = "Your download has started.";
+  });
+</script>
+<script src="js/main.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>
